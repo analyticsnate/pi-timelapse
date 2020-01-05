@@ -1,5 +1,6 @@
 from picamera import PiCamera
 import sys
+import time
 
 picture_name = sys.argv[1]
 
@@ -31,5 +32,5 @@ for i in iso:
         camera.iso = i
         camera.exposure_mode = e
         camera.capture(f'camera_testing/{picture_name}_{i}_{e}.jpg')
-
-# print(f'picture captured and saved as {picture_name}.jpg')
+        time.sleep(1)
+        print(f'iso {i} exposure {e} picture captured and saved')
