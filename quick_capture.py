@@ -1,4 +1,4 @@
-import PiCamera
+from picamera import PiCamera
 import sys
 
 picture_name = sys.argv[1]
